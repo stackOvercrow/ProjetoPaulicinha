@@ -26,6 +26,7 @@ class Area(db.Model):
     id = db.Column(db.Integer(), primary_key=True)
     name = db.Column(db.String(64), unique=True)
     description = db.Column(db.String(64))
+    author = db.Column(db.String(12))
     geometry = db.Column(Geometry('Polygon'))
 
     def serialize(self):
@@ -36,7 +37,8 @@ class Area(db.Model):
             'type': 'Feature',
             'properties': {
                 'Nome': self.name,
-                'Descrição': self.description
+                'Descrição': self.description,
+                'Autor': self.author
             },
         }
 
@@ -128,7 +130,7 @@ def saveMap():
         mapGeometry = str.upper(mapOnJson['geometry']['type'])
         mapCoordinates = mapOnJson['geometry']['coordinates']
 
-        map = Area(name=mapOnJson['properties']['Nome'], description=mapOnJson['properties']['Descrição'],
+        map = Area(name=mapOnJson['properties']['Nome'], description=mapOnJson['properties']['Descrição'], author = mapOnJson['properties']['Autor'],
                    geometry=mapGeometry + ' ((' + geometryCalls[mapGeometry](str(mapCoordinates).replace('[', '').replace(']', '')) + '))')
         db.session.add(map)
         db.session.commit()
