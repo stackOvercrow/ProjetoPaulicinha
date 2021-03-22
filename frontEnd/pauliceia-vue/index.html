@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta lang="pt-br">
+	<link rel="stylesheet" type="text/css" href="_css/style.css">
+	<script language="javascript" src="_js/function.js"></script>
+	<title>Projeto Paulicinha</title>
+</head>
+<body>
+	<article id="mainSection">
+		<header id="cabecalho">
+			<img id="logoImage" src="_imagens/smallLogo.png">
+
+			<img id="pageLogo" src="_imagens/home.png">
+
+			<nav id="menuTopo" onmouseout="mudarLogo('_imagens/home.png')">
+				<ul>
+					<a onmouseover="mudarLogo('_imagens/home.png')" href="index.html"><li>Home</li></a>
+					<a onmouseover="mudarLogo('_imagens/mapa.png')" href="mapa.html"><li>Mapa</li></a>
+					<a onmouseover="mudarLogo('_imagens/contato.png')" href="contato.html"><li>Contato</li></a>
+				</ul>
+			</nav>
+		</header>
+
+		<section id="mainArticle">
+
+			<hgroup id="postSignature">
+				<h1>O Projeto Paulicinha</h1>
+				<h2>Editada pela última vez em 08/09/2020</h2>
+			</hgroup>
+
+			<p>Olá,</p>
+
+			<p>Meu nome é Gabriel dos Reis e sou estudante de Análise e Desenvolvimento de Sistemas pelo Instituto Federal de Educação, Ciência e Tecnologia da Bahia. Ao ser aceito no Projeto Pauliceia, fui orientado a estudar determinados assuntos e usá-los para a construção de um site. Este site, que batizei de Paulicinha em referência ao projeto original, é um sistema de mapas inteligentes onde o usuário pode fazer consultas à dados geográficos. O projeto é um protótipo web GIS construído para ser apresentado à equipe do Pauliceia. O site foi construído utilizando HTML, CSS, JavaScript, Vue.js e Open Layers. O banco de dados utilizado no site é o PostgreSQL, com a extensão espacial PostGIS. O Serviço Web utiliza Python com o framework Flask. Este protótipo foi construído em 8 meses, enquanto eu aprendia as ferramentas citadas anteriormente.</p>
+
+			<figure id="indexImage">
+				<img id="mainImage" src="_imagens/mapaIndex.png" alt="Mapa da Bahia">
+
+				<figcaption id="imageSubtitle">
+					<p>Mapa de uma parte da Bahia. Imagem retirada do Google Maps.</p>
+				</figcaption>
+			</figure>
+
+			<footer id="siteFooter">
+				<p>Feito por Gabriel dos Reis</p>
+				<p>Setembro de 2020</p>
+			</footer>
+		</section>
+	</article>
+</body>
+</html>
